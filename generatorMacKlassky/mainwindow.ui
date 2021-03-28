@@ -1,0 +1,1545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1132</width>
+    <height>903</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>468</width>
+    <height>512</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox_functionParams">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>491</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Генерация:</string>
+    </property>
+    <widget class="QGroupBox" name="groupBox_funcVarsCount">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>20</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Количество переменных:</string>
+     </property>
+     <widget class="QRadioButton" name="radioButton_varsCount_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>41</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_varsCount_4">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>20</y>
+        <width>41</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>231</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>МДНФ</string>
+     </property>
+     <widget class="QGroupBox" name="groupBox_skleykiSteps">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>211</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Этапов склеек:</string>
+      </property>
+      <widget class="QRadioButton" name="radioButton_skleykiCountRandom_mdnf">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Не важно (хотябы 1)</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_skleykiCount_1_mdnf">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>41</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_skleykiCount_2_mdnf">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>50</y>
+         <width>41</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_skleykiCount_3_mdnf">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>50</y>
+         <width>41</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_mintermsCount">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>211</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Количество минтермов:</string>
+      </property>
+      <widget class="QLabel" name="label_mintermsCount_from">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>От:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_mintermsCount_from_mdnf">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>50</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_mintermsCount_to">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>50</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>До:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_mintermsCount_to_mdnf">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>50</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_mintermsCount_chose_mdnf">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>51</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Выбор</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_mintermsCount_any_mdnf">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>20</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Не важно</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_varsCountInLastFunc">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>211</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Количество логических переменных:</string>
+      </property>
+      <widget class="QLabel" name="label_varsCountInLastFunc_from">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>От:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_varsCountInLastFunc_from_mdnf">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>50</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_varsCountInLastFunc_to">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>50</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>До:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_varsCountInLastFunc_to_mdnf">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>50</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_varsCountInLastFunc_chose_mdnf">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>51</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Выбор</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_varsCountInLastFunc_any_mdnf">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>20</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Не важно</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>70</y>
+       <width>231</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>МКНФ</string>
+     </property>
+     <widget class="QGroupBox" name="groupBox_skleykiSteps_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>211</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Этапов склеек:</string>
+      </property>
+      <widget class="QRadioButton" name="radioButton_skleykiCountRandom_mknf">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Не важно (хотябы 1)</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_skleykiCount_1_mknf">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>41</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_skleykiCount_2_mknf">
+       <property name="geometry">
+        <rect>
+         <x>60</x>
+         <y>50</y>
+         <width>41</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_skleykiCount_3_mknf">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>50</y>
+         <width>41</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_mintermsCount_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>211</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Количество макстермов:</string>
+      </property>
+      <widget class="QLabel" name="label_mintermsCount_from_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>От:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_mintermsCount_from_mknf">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>50</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_mintermsCount_to_2">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>50</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>До:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_mintermsCount_to_mknf">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>50</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_mintermsCount_chose_mknf">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>51</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Выбор</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_mintermsCount_any_mknf">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>20</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Не важно</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_varsCountInLastFunc_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>211</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Количество логических переменных:</string>
+      </property>
+      <widget class="QLabel" name="label_varsCountInLastFunc_from_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>От:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_varsCountInLastFunc_from_mknf">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>50</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_varsCountInLastFunc_to_2">
+       <property name="geometry">
+        <rect>
+         <x>110</x>
+         <y>50</y>
+         <width>21</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>До:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEdit_varsCountInLastFunc_to_mknf">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>50</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_varsCountInLastFunc_chose_mknf">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>51</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Выбор</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButton_varsCountInLastFunc_any_mknf">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>20</y>
+         <width>131</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Не важно</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>370</y>
+       <width>471</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Параметры генерации:</string>
+     </property>
+     <widget class="QRadioButton" name="radioButton_generateParam_forAll">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>20</y>
+        <width>121</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Для всех студентов</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_generateParam_forChosedInTable">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>20</y>
+        <width>111</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Для выбранных</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_generateParam_forChoseGroup">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>151</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Для конкретной грппы</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_generateParam_forChosedGroup">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>141</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_generateStudentsCount">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>50</y>
+        <width>261</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Генерация будет выполнена для NNN студентов</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>ПАРАМЕТРЫ ФУНКЦИИ</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_presets">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>470</y>
+       <width>471</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Пресеты</string>
+     </property>
+     <widget class="QComboBox" name="comboBox_chosePrests">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>20</y>
+        <width>191</width>
+        <height>22</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_presetsVibor">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>51</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Выбор:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_presetsApplyName">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>50</y>
+        <width>171</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Обновить данные пресета</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_presetsName">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>50</y>
+        <width>191</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_presetsName">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>50</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Название:</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_presetsAdd">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>20</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Добавить</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_presetsDelete">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>20</y>
+        <width>81</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Удалить</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_loadStudentsFile">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>510</y>
+      <width>601</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Загрузка студентов</string>
+    </property>
+    <widget class="QPushButton" name="pushButton_loadStudentsFile">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>90</y>
+       <width>381</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Загрузить список студентов</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_choseType">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>19</y>
+       <width>142</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Откуда загружать данные:</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_loadFromExel">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>20</y>
+       <width>93</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Из файла Exel</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_loadFromFileVariants">
+     <property name="geometry">
+      <rect>
+       <x>300</x>
+       <y>20</y>
+       <width>127</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Из файла вариантов</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_columnFIO">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>50</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>3</number>
+     </property>
+     <property name="value">
+      <number>2</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_columnGroups">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>50</y>
+       <width>41</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>3</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_columnVariants">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>50</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>3</number>
+     </property>
+     <property name="value">
+      <number>3</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_columnFIO">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Столбец с ФИО*: </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_columnGroups">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>50</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Столбец с группами*: </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_columnVariants">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>50</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Столбец с вариантами*: </string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_firstLineExel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Первая строка*: </string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_firstLineExel">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>80</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>100000</number>
+     </property>
+     <property name="value">
+      <number>1</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_lastLineExel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Последняя строка**: </string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinBox_lastLineExel">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>110</y>
+       <width>61</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>100000</number>
+     </property>
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="displayIntegerBase">
+      <number>10</number>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>160</y>
+       <width>581</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>** Оставьте значение 0 для применения значения &quot;по умолчанию&quot;. Отсчёт ячеек начинается с 1</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>581</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>MS Shell Dlg 2</family>
+       <italic>false</italic>
+      </font>
+     </property>
+     <property name="text">
+      <string>* Обратите внимание: первой ячейкой считается первая НЕ пустая ячейка файла!</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>10</y>
+      <width>601</width>
+      <height>501</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Список студентов</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="0" colspan="3">
+      <widget class="QTableWidget" name="tableWidget">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="editTriggers">
+        <set>QAbstractItemView::NoEditTriggers</set>
+       </property>
+       <column>
+        <property name="text">
+         <string>Группа</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>ФИО Студента</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Вариант</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Прeсет*</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_chose">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Выбрать</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButton_noChose">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Снять выделение</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QPushButton" name="pushButton_clearAllChose">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>41</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Сбросить все</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>590</y>
+      <width>491</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Дополнительно</string>
+    </property>
+    <widget class="QCheckBox" name="checkBox_fullNoPovtor">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>201</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Полностью эксклюзивные функции</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_noPovtorInGroup">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>251</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Эксклюзивне функции внутри одной группы</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_clearFilter">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>20</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Сброс фильтра</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_saveData">
+    <property name="geometry">
+     <rect>
+      <x>520</x>
+      <y>710</y>
+      <width>601</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Сохранение данных</string>
+    </property>
+    <widget class="QCheckBox" name="checkBox_saveTofileForStudents">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>131</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Файл для студентов</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_saveToExel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>131</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Exel документ</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_exelOutput">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>211</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_saveToFile">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>120</y>
+       <width>211</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Сохранить в файл</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_save_choseFileExel">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>211</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Выбрать расположение файла Exel</string>
+     </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_saveExel">
+     <property name="geometry">
+      <rect>
+       <x>250</x>
+       <y>20</y>
+       <width>231</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Exel</string>
+     </property>
+     <widget class="QSpinBox" name="spinBox_saveExel_columnFIO">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>20</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>3</number>
+      </property>
+      <property name="value">
+       <number>2</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_saveExel_columnFIO">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>91</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Столбец с ФИО: </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_saveExel_columnGroups">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Столбец с группами: </string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_saveExel_columnGroups">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>50</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>3</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_saveExel_columnVariants">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>80</y>
+        <width>41</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>3</number>
+      </property>
+      <property name="value">
+       <number>3</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_saveExel_columnVariants">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Столбец с вариантами: </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_saveExel_firstLineExel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>110</y>
+        <width>91</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Первая строка: </string>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinBox_saveExel_firstLineExel">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>110</y>
+        <width>61</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100000</number>
+      </property>
+      <property name="value">
+       <number>1</number>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_loadFunctions">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>780</y>
+      <width>491</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Загрузка функций</string>
+    </property>
+    <widget class="QWidget" name="horizontalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>471</width>
+       <height>43</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_loadFunctions">
+        <property name="text">
+         <string>Идёт загрузка функций...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_loadFuncs">
+        <property name="minimumSize">
+         <size>
+          <width>10</width>
+          <height>41</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Загрузить функции</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+    <widget class="QLabel" name="label_loadData">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>471</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Процесс загрузки:</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_generateVariants">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>670</y>
+      <width>491</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Генерация вариантов</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_generate_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>999</width>
+         <height>9999</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Генерация</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
