@@ -3,12 +3,12 @@
 bool MainWindow::proverkaTableOfTrue()
 {
     allowSave = true; // разрешаем сохранение
-    return proverkaTable(tableWidgetTot, mdnf->getSschTableList());
+    return proverkaTable(tableWidgetTot, mdnf->getSschTableList(), false, false);
 }
 
 bool MainWindow::proverkaOnesOnly()
 {
-    return proverkaTable(tableWidgetOnesOnlyEditing, mdnf->getListOnes(typeMin));
+    return proverkaTable(tableWidgetOnesOnlyEditing, mdnf->getListOnes(typeMin), false, false);
 }
 
 bool MainWindow::proverkaSkleyki1()

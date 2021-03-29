@@ -33,10 +33,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // ставим запрет на изменение размера
 //    auto sizeui = ui->centralWidget->geometry();
-    this->setFixedWidth(geometry().width());
-    this->setFixedHeight(geometry().height());
-    this->setMaximumWidth(geometry().width());
-    this->setMaximumHeight(geometry().height());
+
+//    this->setFixedWidth(geometry().width());
+//    this->setFixedHeight(geometry().height());
+//    this->setMaximumWidth(geometry().width());
+//    this->setMaximumHeight(geometry().height());
 
     editor = new logicEditor(ui->tableWidget_formulaEditor);
 //    editor->setEditChoseItem(true);
@@ -581,6 +582,7 @@ void MainWindow::pushButton_nextStep_tot_2Clicked() // переход от 1й �
         }
     }
     nextStep();
+    setCheckBoxes(tableWidgetsSkleyki[0], checkBoxes_skleyki_1);
 }
 
 void MainWindow::pushButton_add_skleyki_3_clicked() // кнопка создания 3й склейки
@@ -680,6 +682,7 @@ void MainWindow::pushButton_nextStep_skleyki_2Clicked()
         }
     }
     nextStep();
+    setCheckBoxes(tableWidgetsSkleyki[1], checkBoxes_skleyki_2);
 //    int rows = tableWidgetsSkleyki[1]->rowCount(); // получаем количество строк
 
 
@@ -1125,6 +1128,45 @@ void MainWindow::setVariablesToHeader(QTableWidget *tbw)
     tbw->setHorizontalHeaderLabels(headerList); // устаналиваем заголовки
 }
 
+void MainWindow::setCellCheckBox(QTableWidget *tableWidget, QCheckBox *checkBox, int row, int col)
+{
+    QWidget *checkBoxWidget = new QWidget(); //create QWidget
+    QHBoxLayout *layoutCheckBox = new QHBoxLayout(checkBoxWidget); //create QHBoxLayout
+    if(checkBox == nullptr)
+    {
+        qDebug() << "Невозможно добавить checkBox - виджет пустой" << row << col;
+        delete checkBoxWidget;
+        delete layoutCheckBox;
+        return;
+    }
+    layoutCheckBox->addWidget(checkBox);     //add QCheckBox to layout
+    layoutCheckBox->setAlignment(Qt::AlignCenter); //set Alignment layout
+    layoutCheckBox->setContentsMargins(0,0,0,0);
+
+    tableWidget->setCellWidget(row, col, checkBoxWidget);
+}
+
+void MainWindow::setCheckBoxes(QTableWidget *tableWidget, QCheckBox **checkBox)
+{
+    int rows = tableWidget->rowCount();
+    if(!rows)
+    {
+        qDebug() << "Нет строк для добавления checkbox";
+        return;
+    }
+    int cols = tableWidget->columnCount();
+    tableWidget->setColumnCount(cols+1);
+    for (int i=0; i<rows; i++)
+    {
+        if(checkBox[i] != nullptr)
+        {
+            setCellCheckBox(tableWidget, checkBox[i], i, cols);
+        }
+    }
+    tableWidget->setColumnWidth(cols, 90); // устанавливаем ширину
+    tableWidget->setHorizontalHeaderItem(cols, new QTableWidgetItem("Выборка"));
+}
+
 
 void MainWindow::pushButtonFunctionClicked()
 {
@@ -1150,7 +1192,7 @@ void MainWindow::pushButtonTotAddClicked()
         return;
     }
     int rows = tableWidgetTot->rowCount();
-    int cols = tableWidgetTot->columnCount() - 1;
+    int cols = tableWidgetTot->columnCount() - 2;
 //    ui->tableWidget_one_only->setRowCount(rows);
     tableWidgetOnesOnlyEditing->setColumnCount(cols);
     int c = 0; // счетчкис заполненых строк
@@ -1208,9 +1250,11 @@ int MainWindow::getType(QString func_2, QStringList listFunc)
 {
     if(func_2.count() < listFunc.size())
     {
-        qDebug() << "Размер функции меньше размера списка, для определния типа!";
+        qDebug() << "Размер функции меньше размера списка, для определния типа!" << func_2.count() << listFunc.size();
+        qDebug() << func_2 << listFunc;
         return -1;
     }
+    qDebug() << "func_2 = " << func_2;
     int funcSize = func_2.count(); // получаем количество элементов в функции
     int listSize = listFunc.size(); // получаем количество элементов в списке для получения типа
     int zeroCount = 0; // количество выбранных значений, при которых функция принимает значение 0
@@ -1219,6 +1263,7 @@ int MainWindow::getType(QString func_2, QStringList listFunc)
     {
         bool flag = false; // флаг перевода
         int chislo = listFunc.at(i).toInt(&flag, 2); // переводим число из 2й в 10 ссч
+        qDebug() << "Число в 10" << chislo;
         if(!flag) // если число не переводится
         {
             qDebug() << "Число " << listFunc.at(i) << "не удалось перевести в 10ю ссч!";
@@ -1377,9 +1422,15 @@ void MainWindow::pushButton_delete_last_onesClicked()
 
 void MainWindow::pushButton_nextStep_totClicked()
 {
-    goToNextStep(tableWidgetOnesOnlyEditing, tableWidgetOnesOnly, 1); // переходим к следующему действию
+    goToNextStep(tableWidgetOnesOnlyEditing, tableWidgetOnesOnly, 1, false); // переходим к следующему действию
+    qDebug() << "Добавили checkBox";
     nextStep();
-    sortOnesCount(tableWidgetOnesOnly); // сортируем значения по количеству единиц
+    sortOnesCount(tableWidgetOnesOnly, false); // сортируем значения по количеству единиц
+//    tableWidgetOnesOnly->setColumnCount(5);
+//    setCellCheckBox(tableWidgetOnesOnly, checkBoxes_ones[0], 0, 4);
+//    setCellCheckBox(tableWidgetOnesOnly, checkBoxes_ones[1], 1, 4);
+//    setCellCheckBox(tableWidgetOnesOnly, checkBoxes_ones[2], 2, 4);
+    setCheckBoxes(tableWidgetOnesOnly, checkBoxes_ones);
 }
 
 void MainWindow::pushButtonClearOneOnlyClicked()
@@ -1394,7 +1445,7 @@ void MainWindow::pushButtonClearOneOnlyClicked()
 void MainWindow::pushButtonProverkaClicked() // проверка правильности где функция равна 1
 {
     QStringList listFunc;
-    bool ok = getTWTextList(tableWidgetOnesOnlyEditing, listFunc); // получаем списолк значений из таблицы
+    bool ok = getTWTextList(tableWidgetOnesOnlyEditing, listFunc, false); // получаем списолк значений из таблицы
     if(!ok)
     {
         warningError("Таблица пуста!");
@@ -1688,6 +1739,7 @@ void MainWindow::on_lineEdit_func_2_textChanged(const QString &arg1)
     //    message("Число, полученное в 2 системе счисления добавлено в таблицу истинности. Для проверки правильности воспользуйтесь кнопкой проверка табилцы истинности.");
         //    nextStep(); // переходим к следующему шагу
         function_2 = inputString; // сохраняем 2ю запись функции
+        qDebug() << "func_2 = " << function_2;
     }
 
 }
@@ -1696,4 +1748,10 @@ void MainWindow::on_checkBox_spiltToTetrads_stateChanged(int arg1)
 {
     splitToTetrads = arg1;
     on_lineEdit_func_2_textChanged(ui->lineEdit_func_2->text());
+}
+
+void MainWindow::on_pushButton_checkTableOfTrue_clicked()
+{
+    function_2 = ui->lineEdit_func_2->text().remove(" ");
+    qDebug() << "func-2 = " << function_2;
 }

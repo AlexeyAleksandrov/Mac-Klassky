@@ -79,7 +79,7 @@ private:
     QCheckBox **checkBoxes_ones = nullptr; // галочки для создания склеек из таблицы с 1
     QCheckBox **checkBoxes_skleyki_1 = nullptr; // галочки для склеек
     QCheckBox **checkBoxes_skleyki_2 = nullptr; // галочки для склеек
-    QCheckBox **checkBoxes_skleyki_3 = nullptr; // галочки для склеек
+//    QCheckBox **checkBoxes_skleyki_3 = nullptr; // галочки для склеек
     QCheckBox *checkBox_autoInputFormula = nullptr; // галочка автоматического ввода синтаксиса
     QCheckBox *checkBox_editChoseItemFormula = nullptr; // галоска выбора редактирования выбранного элемента
 
@@ -158,13 +158,13 @@ private:
 
     // работа со склейками
 //    void makeSkleyki(QStringList numbersList, QStringList &skleykiList); // функция, которая производит склейки
-    void createSkleyka(QTableWidget *tableWidgetInput, QCheckBox **checkBoxesInput, QTableWidget *&tableWidgetOutput, int numSkleyka); // создать склейку на основе таблицыи и галочек и выводим в другую таблицу результат, numSkleika - это номер этапа склейки
+    void createSkleyka(QTableWidget *tableWidgetInput, QCheckBox **checkBoxesInput, QTableWidget *&tableWidgetOutput, int numSkleyka, bool ignoreCellWidgetInLastColumn = true); // создать склейку на основе таблицыи и галочек и выводим в другую таблицу результат, numSkleika - это номер этапа склейки
     bool isContainsSkleyki(QStringList skleykiList, int numSkleyka); // проверяет, все-ли склейки из списка содержатся в правильном варианте (true - все нормально, false - хотя бы одна не содержится)
-    void moveSkleyka(QTableWidget *tableWidgetInput, QCheckBox **checkBoxesInput, QTableWidget *&tableWidgetOutput, int numSkleyka); // перемещение выделенных элементов без склейки
-    bool proverkaTable(QTableWidget *tableWidgetInput, QStringList listOfSkeyki, bool ignoreRedColor = false); // проверка склеек, ignoreRedColor - игнорировать строки с красным цветом (для повторящихся склеек)
-    void goToNextStep(QTableWidget *tableWidgetInput, QTableWidget *&tableWidgetOutput, int nextTabIndex);
-    void sortSkleiki(QTableWidget *skleikiTableWidget); // сортировка склеек по количеству в них Х
-    void sortOnesCount(QTableWidget *tableWidgetInput); // сортировка значений по количеству в них 1
+    void moveSkleyka(QTableWidget *tableWidgetInput, QCheckBox **checkBoxesInput, QTableWidget *&tableWidgetOutput, int numSkleyka, bool ignoreCellWidgetInLastColumn = true); // перемещение выделенных элементов без склейки
+    bool proverkaTable(QTableWidget *tableWidgetInput, QStringList listOfSkeyki, bool ignoreRedColor = false, bool ignoreCellWidgetInLastColumn = true); // проверка склеек, ignoreRedColor - игнорировать строки с красным цветом (для повторящихся склеек)
+    void goToNextStep(QTableWidget *tableWidgetInput, QTableWidget *&tableWidgetOutput, int nextTabIndex,bool ignoreCellWidgetInLastColumn = true);
+    void sortSkleiki(QTableWidget *skleikiTableWidget, bool ignoreCellWidgetInLastColumn = true); // сортировка склеек по количеству в них Х
+    void sortOnesCount(QTableWidget *tableWidgetInput, bool ignoreCellWidgetInLastColumn = true); // сортировка значений по количеству в них 1
 
 
     // перемещение по этапам работы
@@ -179,14 +179,16 @@ private:
     void addQStringListToTWOneSymwolInItem(QTableWidget *&tableWidget, QStringList list); // добавить QStringList по символам в таблицу
     void clearTW(QTableWidget *&tableWidget); // очищает tableWidget
     bool getTWItemText(QTableWidget *&tableWidget, int row, int col, QString &outputString); // получает текст из конкретной ячейки таблицы
-    bool getTWTextList(QTableWidget *&tableWidget, QStringList &outputList); // значение строк таблицы как QStringList
+    bool getTWTextList(QTableWidget *&tableWidget, QStringList &outputList, bool ignoreCellWidgetInLastColumn = true); // значение строк таблицы как QStringList
     void addRow(QTableWidget *&tableWidget, QStringList rowList, int colorRed = -1, int colorGreen = -1, int colorBlue = -1); // создает в таблице строку и выводит в неё элементы списка. Дополнительно можно передать цвет для закраски строки
-    void copyTableWidget(QTableWidget *tableWidgetInput, QTableWidget *&tableWidgetOutput, bool skipIdenticalLines); //  skipIdenticalLines - Пропуск одинаковых стролк
+    void copyTableWidget(QTableWidget *tableWidgetInput, QTableWidget *&tableWidgetOutput, bool skipIdenticalLines, bool ignoreCellWidgetInLastColumn); //  skipIdenticalLines - Пропуск одинаковых стролк
     void deletelastRow(QTableWidget *&tableWidget); // удаляет последнюю строчку в таблице
-    QString getQStringByTableWidget(QTableWidget *tableWidget, bool saveLineColor = false); // получить данные из таблицы в виде строки
+    QString getQStringByTableWidget(QTableWidget *tableWidget, bool saveLineColor = false, bool ignoreCellWidgetInLastColumn = true); // получить данные из таблицы в виде строки
     void lockFormulaEditor(bool lock); // заблокировать / разблокировать редактор формул
     void center_text_in_table(QTableWidget *tbw); // центрировать текст в ячейках таблицы
     void setVariablesToHeader(QTableWidget *tbw); // функция, устаналивающая в качестве заголовков таблицы переменные (a, b, c, d)
+    void setCellCheckBox(QTableWidget *tableWidget, QCheckBox *checkBox, int row, int col); // устанавливает checkbox
+    void setCheckBoxes(QTableWidget *tableWidget, QCheckBox **checkBox);
 
     // сохранение данных в файл
     void saveDataToFile(); // функция сохранения данных в файл
@@ -278,6 +280,8 @@ private slots:
     void on_lineEdit_func_2_textChanged(const QString &arg1);
 
     void on_checkBox_spiltToTetrads_stateChanged(int arg1);
+
+    void on_pushButton_checkTableOfTrue_clicked();
 
 private: // функции проверки
     bool proverkaTableOfTrue(); // функция проверки таблицы истинности

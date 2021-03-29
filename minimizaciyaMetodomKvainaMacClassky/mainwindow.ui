@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -23,2502 +23,2362 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>661</width>
-      <height>701</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="cursor">
-     <cursorShape>ArrowCursor</cursorShape>
-    </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <widget class="QWidget" name="tab">
-     <attribute name="title">
-      <string>Функция</string>
-     </attribute>
-     <layout class="QGridLayout" name="gridLayout_4">
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_function">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Функция</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_function">
+          <property name="text">
+           <string>F_16 =</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="lineEdit_function">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButton_enterFunction">
+          <property name="text">
+           <string>Старт</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>F_2 =</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4" colspan="2">
+         <widget class="QLineEdit" name="lineEdit_func_2">
+          <property name="text">
+           <string>0010111100110101</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4" colspan="3">
+         <widget class="QCheckBox" name="checkBox_spiltToTetrads">
+          <property name="text">
+           <string>Разделение на тетрады</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="5">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>Таблица истинности</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="2" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_2">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_8">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_13">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_1">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_3">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_14">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_11">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="12" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_12">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_5">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_0">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_6">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_10">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_7">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="15" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_15">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_4">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="3">
+            <widget class="QCheckBox" name="checkBox_tot_9">
+             <property name="text">
+              <string>Add</string>
+             </property>
+            </widget>
+           </item>
+           <item row="16" column="0">
+            <widget class="QPushButton" name="pushButton_checkTableOfTrue">
+             <property name="text">
+              <string>Проверить таблицу истинности</string>
+             </property>
+            </widget>
+           </item>
+           <item row="16" column="1">
+            <widget class="QPushButton" name="pushButton_tot_add">
+             <property name="text">
+              <string>Добавить</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" rowspan="16" colspan="2">
+            <widget class="QTableWidget" name="tableWidget_tableOfTrue">
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAsNeeded</enum>
+             </property>
+             <property name="horizontalScrollBarPolicy">
+              <enum>Qt::ScrollBarAsNeeded</enum>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <property name="tabKeyNavigation">
+              <bool>true</bool>
+             </property>
+             <property name="showDropIndicator" stdset="0">
+              <bool>true</bool>
+             </property>
+             <property name="dragEnabled">
+              <bool>false</bool>
+             </property>
+             <property name="showGrid">
+              <bool>true</bool>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+             <property name="cornerButtonEnabled">
+              <bool>true</bool>
+             </property>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>39</number>
+             </attribute>
+             <attribute name="verticalHeaderDefaultSectionSize">
+              <number>30</number>
+             </attribute>
+             <row>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>2</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>3</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>4</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>5</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>6</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>7</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>8</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>9</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>10</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>11</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>12</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>13</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>14</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>15</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>16</string>
+              </property>
+             </row>
+             <column>
+              <property name="text">
+               <string>a</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>b</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>c</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>d</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>F</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="5" colspan="2">
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
+           <string>F(a, b, c, d) = 1</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="1" column="0" colspan="2">
+            <widget class="QTableWidget" name="tableWidget_one_only_editing">
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+             <attribute name="horizontalHeaderDefaultSectionSize">
+              <number>39</number>
+             </attribute>
+             <attribute name="verticalHeaderDefaultSectionSize">
+              <number>30</number>
+             </attribute>
+             <row>
+              <property name="text">
+               <string>1</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>2</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>3</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>4</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>5</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>6</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>7</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>8</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>9</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>10</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>11</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>12</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>13</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>14</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>15</string>
+              </property>
+             </row>
+             <row>
+              <property name="text">
+               <string>16</string>
+              </property>
+             </row>
+             <column>
+              <property name="text">
+               <string>a</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>b</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>c</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>d</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QPushButton" name="pushButton_proverka_oneOnly">
+             <property name="text">
+              <string>Проверить</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QPushButton" name="pushButton_nextStep_tot">
+             <property name="text">
+              <string>Далее</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>F(a, b, c, d) = 1</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Склейка 1</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0" rowspan="16">
+         <widget class="QTableWidget" name="tableWidget_one_only">
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>39</number>
+          </attribute>
+          <attribute name="verticalHeaderDefaultSectionSize">
+           <number>30</number>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>4</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>5</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>6</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>7</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>8</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>9</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>10</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>11</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>12</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>13</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>14</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>16</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>a</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>b</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>c</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>d</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_0">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2" rowspan="16" colspan="2">
+         <widget class="QTableWidget" name="tableWidget_skleiki_1_editing">
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>39</number>
+          </attribute>
+          <attribute name="verticalHeaderDefaultSectionSize">
+           <number>30</number>
+          </attribute>
+          <row>
+           <property name="text">
+            <string>1</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>2</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>3</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>4</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>5</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>6</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>7</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>8</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>9</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>10</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>11</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>12</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>13</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>14</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>15</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>16</string>
+           </property>
+          </row>
+          <column>
+           <property name="text">
+            <string>a</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>b</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>c</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>d</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_1">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_2">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_3">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_4">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_5">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_6">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_7">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_8">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_9">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_10">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_11">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_12">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_13">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_14">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="1">
+         <widget class="QCheckBox" name="checkBox_ones_15">
+          <property name="text">
+           <string>Add</string>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="1">
+         <widget class="QPushButton" name="pushButton_tot_add_to_skeyki_1">
+          <property name="text">
+           <string>Добавить</string>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="2">
+         <widget class="QPushButton" name="pushButton_proverka_skleiki_1_editing">
+          <property name="text">
+           <string>Проверить</string>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="3">
+         <widget class="QPushButton" name="pushButton_nextStep_onesOnly">
+          <property name="text">
+           <string>Далее</string>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="1">
+         <widget class="QPushButton" name="pushButton_tot_move_to_skeyki_1">
+          <property name="text">
+           <string>Без склейки</string>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="2">
+         <widget class="QPushButton" name="pushButton_clear_skleiki_1_editing">
+          <property name="text">
+           <string>Удалить</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Склейка 2</string>
+       </attribute>
+       <widget class="QTableWidget" name="tableWidget_skleiki_1">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>181</width>
+          <height>511</height>
+         </rect>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>39</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>30</number>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>9</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>10</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>11</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>12</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>13</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>14</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>15</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>16</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>a</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>b</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>c</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>d</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_1_15">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>500</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
         <property name="text">
-         <string>F_16 =</string>
+         <string>Add</string>
         </property>
        </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLineEdit" name="lineEdit_function">
+       <widget class="QCheckBox" name="checkBox_skleyka_1_14">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>470</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
         <property name="text">
-         <string/>
+         <string>Add</string>
         </property>
        </widget>
-      </item>
-      <item row="0" column="2">
-       <widget class="QPushButton" name="pushButton_enterFunction">
+       <widget class="QCheckBox" name="checkBox_skleyka_1_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>110</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
         <property name="text">
-         <string>Старт</string>
+         <string>Add</string>
         </property>
        </widget>
-      </item>
-      <item row="0" column="3">
-       <widget class="QLabel" name="label_5">
+       <widget class="QCheckBox" name="checkBox_skleyka_1_0">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>50</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
         <property name="text">
-         <string>F_2 =</string>
+         <string>Add</string>
         </property>
        </widget>
-      </item>
-      <item row="0" column="4" colspan="2">
-       <widget class="QLineEdit" name="lineEdit_func_2">
+       <widget class="QCheckBox" name="checkBox_skleyka_1_1">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>80</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
         <property name="text">
-         <string>0010 1111 0011 0101</string>
+         <string>Add</string>
         </property>
        </widget>
-      </item>
-      <item row="1" column="4" colspan="3">
-       <widget class="QCheckBox" name="checkBox_spiltToTetrads">
+       <widget class="QCheckBox" name="checkBox_skleyka_1_5">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>200</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
         <property name="text">
-         <string>Разделение на тетрады</string>
+         <string>Add</string>
         </property>
        </widget>
-      </item>
-      <item row="2" column="0" colspan="5">
-       <widget class="QGroupBox" name="groupBox">
-        <property name="title">
-         <string>Таблица истинности</string>
+       <widget class="QCheckBox" name="checkBox_skleyka_1_6">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>230</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
         </property>
-        <layout class="QGridLayout" name="gridLayout_2">
-         <item row="2" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_2">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="8" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_8">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="13" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_13">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_1">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_3">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="14" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_14">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="11" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_11">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="12" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_12">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_5">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_0">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_6">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="10" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_10">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_7">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="15" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_15">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_4">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="3">
-          <widget class="QCheckBox" name="checkBox_tot_9">
-           <property name="text">
-            <string>Add</string>
-           </property>
-          </widget>
-         </item>
-         <item row="16" column="0">
-          <widget class="QPushButton" name="pushButton_checkTableOfTrue">
-           <property name="text">
-            <string>Проверить таблицу истинности</string>
-           </property>
-          </widget>
-         </item>
-         <item row="16" column="1">
-          <widget class="QPushButton" name="pushButton_tot_add">
-           <property name="text">
-            <string>Добавить</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0" rowspan="16" colspan="2">
-          <widget class="QTableWidget" name="tableWidget_tableOfTrue">
-           <property name="verticalScrollBarPolicy">
-            <enum>Qt::ScrollBarAlwaysOff</enum>
-           </property>
-           <property name="horizontalScrollBarPolicy">
-            <enum>Qt::ScrollBarAsNeeded</enum>
-           </property>
-           <property name="editTriggers">
-            <set>QAbstractItemView::NoEditTriggers</set>
-           </property>
-           <property name="tabKeyNavigation">
-            <bool>true</bool>
-           </property>
-           <property name="showDropIndicator" stdset="0">
-            <bool>true</bool>
-           </property>
-           <property name="dragEnabled">
-            <bool>false</bool>
-           </property>
-           <property name="showGrid">
-            <bool>true</bool>
-           </property>
-           <property name="wordWrap">
-            <bool>true</bool>
-           </property>
-           <property name="cornerButtonEnabled">
-            <bool>true</bool>
-           </property>
-           <attribute name="horizontalHeaderDefaultSectionSize">
-            <number>39</number>
-           </attribute>
-           <attribute name="verticalHeaderDefaultSectionSize">
-            <number>30</number>
-           </attribute>
-           <row>
-            <property name="text">
-             <string>1</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>2</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>3</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>4</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>5</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>6</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>7</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>8</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>9</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>10</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>11</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>12</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>13</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>14</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>15</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>16</string>
-            </property>
-           </row>
-           <column>
-            <property name="text">
-             <string>a</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>b</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>c</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>d</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>F</string>
-            </property>
-           </column>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item row="2" column="5" colspan="2">
-       <widget class="QGroupBox" name="groupBox_2">
-        <property name="title">
-         <string>F(a, b, c, d) = 1</string>
+        <property name="text">
+         <string>Add</string>
         </property>
-        <layout class="QGridLayout" name="gridLayout_3">
-         <item row="1" column="0" colspan="2">
-          <widget class="QTableWidget" name="tableWidget_one_only_editing">
-           <property name="editTriggers">
-            <set>QAbstractItemView::NoEditTriggers</set>
-           </property>
-           <attribute name="horizontalHeaderDefaultSectionSize">
-            <number>39</number>
-           </attribute>
-           <attribute name="verticalHeaderDefaultSectionSize">
-            <number>30</number>
-           </attribute>
-           <row>
-            <property name="text">
-             <string>1</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>2</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>3</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>4</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>5</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>6</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>7</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>8</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>9</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>10</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>11</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>12</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>13</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>14</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>15</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>16</string>
-            </property>
-           </row>
-           <column>
-            <property name="text">
-             <string>a</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>b</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>c</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>d</string>
-            </property>
-           </column>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QPushButton" name="pushButton_proverka_oneOnly">
-           <property name="text">
-            <string>Проверить</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QPushButton" name="pushButton_nextStep_tot">
-           <property name="text">
-            <string>Далее</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>F(a, b, c, d) = 1</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
        </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="tab_2">
-     <attribute name="title">
-      <string>Склейка 1</string>
-     </attribute>
-     <widget class="QTableWidget" name="tableWidget_one_only">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>181</width>
-        <height>511</height>
-       </rect>
-      </property>
-      <property name="editTriggers">
-       <set>QAbstractItemView::NoEditTriggers</set>
-      </property>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>39</number>
-      </attribute>
-      <attribute name="verticalHeaderDefaultSectionSize">
-       <number>30</number>
-      </attribute>
-      <row>
-       <property name="text">
-        <string>1</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>2</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>3</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>4</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>5</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>6</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>7</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>8</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>9</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>10</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>11</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>12</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>13</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>14</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>15</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>16</string>
-       </property>
-      </row>
-      <column>
-       <property name="text">
-        <string>a</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>b</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>c</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>d</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_15">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>500</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_12">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>410</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_13">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>440</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_3">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>140</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_0">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>50</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_4">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>170</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_1">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>80</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_7">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>260</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_8">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>290</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_5">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>200</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_2">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>110</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_6">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>230</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_10">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>350</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_11">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>380</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_9">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>320</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_ones_14">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>470</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_tot_add_to_skeyki_1">
-      <property name="geometry">
-       <rect>
-        <x>220</x>
-        <y>540</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Добавить</string>
-      </property>
-     </widget>
-     <widget class="QTableWidget" name="tableWidget_skleiki_1_editing">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>20</y>
-        <width>181</width>
-        <height>511</height>
-       </rect>
-      </property>
-      <property name="editTriggers">
-       <set>QAbstractItemView::NoEditTriggers</set>
-      </property>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>39</number>
-      </attribute>
-      <attribute name="verticalHeaderDefaultSectionSize">
-       <number>30</number>
-      </attribute>
-      <row>
-       <property name="text">
-        <string>1</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>2</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>3</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>4</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>5</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>6</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>7</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>8</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>9</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>10</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>11</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>12</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>13</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>14</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>15</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>16</string>
-       </property>
-      </row>
-      <column>
-       <property name="text">
-        <string>a</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>b</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>c</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>d</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QPushButton" name="pushButton_clear_skleiki_1_editing">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>570</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Удалить</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_nextStep_onesOnly">
-      <property name="geometry">
-       <rect>
-        <x>420</x>
-        <y>540</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Далее</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_proverka_skleiki_1_editing">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>540</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Проверить</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_tot_move_to_skeyki_1">
-      <property name="geometry">
-       <rect>
-        <x>220</x>
-        <y>570</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Без склейки</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_3">
-     <attribute name="title">
-      <string>Склейка 2</string>
-     </attribute>
-     <widget class="QTableWidget" name="tableWidget_skleiki_1">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>181</width>
-        <height>511</height>
-       </rect>
-      </property>
-      <property name="editTriggers">
-       <set>QAbstractItemView::NoEditTriggers</set>
-      </property>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>39</number>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderDefaultSectionSize">
-       <number>30</number>
-      </attribute>
-      <row>
-       <property name="text">
-        <string>1</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>2</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>3</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>4</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>5</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>6</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>7</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>8</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>9</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>10</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>11</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>12</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>13</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>14</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>15</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>16</string>
-       </property>
-      </row>
-      <column>
-       <property name="text">
-        <string>a</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>b</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>c</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>d</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_15">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>500</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_14">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>470</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_2">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>110</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_0">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>50</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_1">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>80</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_5">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>200</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_6">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>230</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_3">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>140</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_4">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>170</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_9">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>320</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_7">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>260</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_8">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>290</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_12">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>410</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_13">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>440</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_10">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>350</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_1_11">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>380</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_add_skleyki_1">
-      <property name="geometry">
-       <rect>
-        <x>220</x>
-        <y>540</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Добавить</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_clear_skleiki_2_editing">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>570</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Удалить</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_proverka_skleyki_3">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>540</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Проверить</string>
-      </property>
-     </widget>
-     <widget class="QTableWidget" name="tableWidget_skleiki_2_editing">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>20</y>
-        <width>181</width>
-        <height>511</height>
-       </rect>
-      </property>
-      <property name="editTriggers">
-       <set>QAbstractItemView::NoEditTriggers</set>
-      </property>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>39</number>
-      </attribute>
-      <attribute name="verticalHeaderDefaultSectionSize">
-       <number>30</number>
-      </attribute>
-      <row>
-       <property name="text">
-        <string>1</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>2</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>3</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>4</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>5</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>6</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>7</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>8</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>9</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>10</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>11</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>12</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>13</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>14</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>15</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>16</string>
-       </property>
-      </row>
-      <column>
-       <property name="text">
-        <string>a</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>b</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>c</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>d</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QPushButton" name="pushButton_nextStep_skleyki_2">
-      <property name="geometry">
-       <rect>
-        <x>420</x>
-        <y>540</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Далее</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_tot_move_to_skeyki_2">
-      <property name="geometry">
-       <rect>
-        <x>220</x>
-        <y>570</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Без склейки</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_4">
-     <attribute name="title">
-      <string>Склейка 3</string>
-     </attribute>
-     <widget class="QTableWidget" name="tableWidget_skleiki_2">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>181</width>
-        <height>511</height>
-       </rect>
-      </property>
-      <property name="editTriggers">
-       <set>QAbstractItemView::NoEditTriggers</set>
-      </property>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>39</number>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderDefaultSectionSize">
-       <number>30</number>
-      </attribute>
-      <row>
-       <property name="text">
-        <string>1</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>2</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>3</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>4</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>5</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>6</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>7</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>8</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>9</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>10</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>11</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>12</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>13</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>14</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>15</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>16</string>
-       </property>
-      </row>
-      <column>
-       <property name="text">
-        <string>a</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>b</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>c</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>d</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QTableWidget" name="tableWidget_skleiki_3_editing">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>20</y>
-        <width>181</width>
-        <height>511</height>
-       </rect>
-      </property>
-      <property name="editTriggers">
-       <set>QAbstractItemView::NoEditTriggers</set>
-      </property>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>39</number>
-      </attribute>
-      <attribute name="verticalHeaderDefaultSectionSize">
-       <number>30</number>
-      </attribute>
-      <row>
-       <property name="text">
-        <string>1</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>2</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>3</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>4</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>5</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>6</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>7</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>8</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>9</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>10</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>11</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>12</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>13</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>14</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>15</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>16</string>
-       </property>
-      </row>
-      <column>
-       <property name="text">
-        <string>a</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>b</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>c</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>d</string>
-       </property>
-      </column>
-     </widget>
-     <widget class="QPushButton" name="pushButton_nextStep_onesOnly_3">
-      <property name="geometry">
-       <rect>
-        <x>420</x>
-        <y>540</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Далее</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_add_skleyki_2">
-      <property name="geometry">
-       <rect>
-        <x>220</x>
-        <y>540</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Добавить</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_clearSkleyki_2">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>570</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Удалить</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_proverka_skleyki_3_0">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>540</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Проверить</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_0">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>50</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_1">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>80</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_2">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>110</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_3">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>140</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_4">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>170</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_5">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>200</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_6">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>230</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_7">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>260</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_8">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>290</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_9">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>320</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_10">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>350</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_11">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>380</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_12">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>410</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_13">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>440</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_14">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>470</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_skleyka_2_15">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>500</y>
-        <width>70</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_tot_move_to_skeyki_3">
-      <property name="geometry">
-       <rect>
-        <x>220</x>
-        <y>570</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Без склейки</string>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_6">
-     <attribute name="title">
-      <string>Минимизация</string>
-     </attribute>
-     <widget class="QTableWidget" name="tableWidget_kartaMinimizacii">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>30</y>
-        <width>491</width>
-        <height>301</height>
-       </rect>
-      </property>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>40</number>
-      </attribute>
-     </widget>
-     <widget class="QPushButton" name="pushButton_proverka_karta_minimizacii">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>590</y>
-        <width>191</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Проверка минимальной функции</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_proverka_karti_minimizacii">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>370</y>
-        <width>171</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Проверка карты покрытия</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_6">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>10</y>
-        <width>111</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Карта покрытия</string>
-      </property>
-     </widget>
-     <widget class="QTableWidget" name="tableWidget_formulaEditor">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>400</y>
-        <width>491</width>
-        <height>71</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <attribute name="horizontalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderMinimumSectionSize">
-       <number>1</number>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderMinimumSectionSize">
-       <number>1</number>
-      </attribute>
-     </widget>
-     <widget class="QPushButton" name="pushButton_A">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>490</y>
-        <width>31</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>A</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_B">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>490</y>
-        <width>31</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>B</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_C">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>490</y>
-        <width>31</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>C</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_D">
-      <property name="geometry">
-       <rect>
-        <x>160</x>
-        <y>490</y>
-        <width>31</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>D</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_AND">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>490</y>
-        <width>31</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>*</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton__OR">
-      <property name="geometry">
-       <rect>
-        <x>240</x>
-        <y>490</y>
-        <width>31</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>+</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_SKOBKA_BEFORE">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>490</y>
-        <width>31</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>(</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_SKOBKA_AFTER">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>490</y>
-        <width>31</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>)</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_INV">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>490</y>
-        <width>31</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>!</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_DEL">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>490</y>
-        <width>81</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Удалить</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_CLEAR">
-      <property name="geometry">
-       <rect>
-        <x>450</x>
-        <y>490</y>
-        <width>81</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>Очистить</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_setRedColor">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>340</y>
-        <width>154</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Выделить красным</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_setGreenColor">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>340</y>
-        <width>161</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Выделить зелёным</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_setWhiteColor">
-      <property name="geometry">
-       <rect>
-        <x>370</x>
-        <y>340</y>
-        <width>161</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Выделить белым</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_notD">
-      <property name="geometry">
-       <rect>
-        <x>160</x>
-        <y>520</y>
-        <width>31</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>!D</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_notB">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>520</y>
-        <width>31</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>!B</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_notA">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>520</y>
-        <width>31</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>!A</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_notC">
-      <property name="geometry">
-       <rect>
-        <x>120</x>
-        <y>520</y>
-        <width>31</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>!C</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_autoInputFormula">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>560</y>
-        <width>171</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Упрощённый ввод формулы</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_editChoseItemFormula">
-      <property name="geometry">
-       <rect>
-        <x>230</x>
-        <y>560</y>
-        <width>231</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Редактирование выбранного элемента</string>
-      </property>
-     </widget>
-    </widget>
-   </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_1_3">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>140</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_1_4">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>170</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_1_9">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>320</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_1_7">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>260</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_1_8">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>290</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_1_12">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>410</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_1_13">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>440</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_1_10">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>350</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_1_11">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>380</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_add_skleyki_1">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>540</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Добавить</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_clear_skleiki_2_editing">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>570</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Удалить</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_proverka_skleyki_3">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>540</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Проверить</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget_skleiki_2_editing">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>20</y>
+          <width>181</width>
+          <height>511</height>
+         </rect>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>39</number>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>30</number>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>9</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>10</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>11</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>12</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>13</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>14</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>15</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>16</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>a</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>b</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>c</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>d</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="pushButton_nextStep_skleyki_2">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>540</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Далее</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_tot_move_to_skeyki_2">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>570</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Без склейки</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Склейка 3</string>
+       </attribute>
+       <widget class="QTableWidget" name="tableWidget_skleiki_2">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>20</y>
+          <width>181</width>
+          <height>511</height>
+         </rect>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>39</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>30</number>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>9</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>10</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>11</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>12</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>13</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>14</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>15</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>16</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>a</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>b</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>c</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>d</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget_skleiki_3_editing">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>20</y>
+          <width>181</width>
+          <height>511</height>
+         </rect>
+        </property>
+        <property name="editTriggers">
+         <set>QAbstractItemView::NoEditTriggers</set>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>39</number>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>30</number>
+        </attribute>
+        <row>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>2</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>3</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>4</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>5</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>8</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>9</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>10</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>11</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>12</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>13</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>14</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>15</string>
+         </property>
+        </row>
+        <row>
+         <property name="text">
+          <string>16</string>
+         </property>
+        </row>
+        <column>
+         <property name="text">
+          <string>a</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>b</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>c</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>d</string>
+         </property>
+        </column>
+       </widget>
+       <widget class="QPushButton" name="pushButton_nextStep_onesOnly_3">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>540</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Далее</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_add_skleyki_2">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>540</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Добавить</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_clearSkleyki_2">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>570</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Удалить</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_proverka_skleyki_3_0">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>540</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Проверить</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_0">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>50</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_1">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>80</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_2">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>110</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_3">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>140</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_4">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>170</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_5">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>200</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_6">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>230</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_7">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>260</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_8">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>290</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_9">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>320</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_10">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>350</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_11">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>380</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_12">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>410</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_13">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>440</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_14">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>470</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_skleyka_2_15">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>500</y>
+          <width>70</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_tot_move_to_skeyki_3">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>570</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Без склейки</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Минимизация</string>
+       </attribute>
+       <widget class="QTableWidget" name="tableWidget_kartaMinimizacii">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>491</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>40</number>
+        </attribute>
+       </widget>
+       <widget class="QPushButton" name="pushButton_proverka_karta_minimizacii">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>590</y>
+          <width>191</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Проверка минимальной функции</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_proverka_karti_minimizacii">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>370</y>
+          <width>171</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Проверка карты покрытия</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>10</y>
+          <width>111</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Карта покрытия</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableWidget_formulaEditor">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>400</y>
+          <width>491</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>1</number>
+        </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>1</number>
+        </attribute>
+       </widget>
+       <widget class="QPushButton" name="pushButton_A">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>490</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>A</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_B">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>490</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>B</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_C">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>490</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>C</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_D">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>490</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>D</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_AND">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>490</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>*</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton__OR">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>490</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>+</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_SKOBKA_BEFORE">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>490</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>(</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_SKOBKA_AFTER">
+        <property name="geometry">
+         <rect>
+          <x>320</x>
+          <y>490</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>)</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_INV">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>490</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>!</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_DEL">
+        <property name="geometry">
+         <rect>
+          <x>360</x>
+          <y>490</y>
+          <width>81</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Удалить</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_CLEAR">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>490</y>
+          <width>81</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Очистить</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_setRedColor">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>340</y>
+          <width>154</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Выделить красным</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_setGreenColor">
+        <property name="geometry">
+         <rect>
+          <x>200</x>
+          <y>340</y>
+          <width>161</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Выделить зелёным</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_setWhiteColor">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>340</y>
+          <width>161</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Выделить белым</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_notD">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>520</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>!D</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_notB">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>520</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>!B</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_notA">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>520</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>!A</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_notC">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>520</y>
+          <width>31</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>!C</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_autoInputFormula">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>560</y>
+          <width>171</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Упрощённый ввод формулы</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_editChoseItemFormula">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>560</y>
+          <width>231</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Редактирование выбранного элемента</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
  </widget>

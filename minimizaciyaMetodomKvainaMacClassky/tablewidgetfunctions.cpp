@@ -177,7 +177,7 @@ bool MainWindow::getTWItemText(QTableWidget *&tableWidget, int row, int col, QSt
     return true;
 }
 
-bool MainWindow::getTWTextList(QTableWidget *&tableWidget, QStringList &outputList)
+bool MainWindow::getTWTextList(QTableWidget *&tableWidget, QStringList &outputList, bool ignoreCellWidgetInLastColumn)
 {
     // стартовые проверки входных параметров
     if(*&tableWidget == nullptr) // если указатель пустой
@@ -196,6 +196,10 @@ bool MainWindow::getTWTextList(QTableWidget *&tableWidget, QStringList &outputLi
     {
         qDebug() << "В таблице нет столбцов";
         return false;
+    }
+    if(ignoreCellWidgetInLastColumn) // последний столбец отдан под виджеты
+    {
+        cols--;
     }
     QStringList listRows; // создаем список, в который занесем элементы
     for (int i=0; i<rows; i++)
@@ -244,7 +248,7 @@ void MainWindow::addRow(QTableWidget *&tableWidget, QStringList rowList, int col
     center_text_in_table(tableWidget); // выравниваем ячейки
 }
 
-void MainWindow::createSkleyka(QTableWidget *tableWidgetInput, QCheckBox **checkBoxesInput, QTableWidget *&tableWidgetOutput, int numSkleyka)
+void MainWindow::createSkleyka(QTableWidget *tableWidgetInput, QCheckBox **checkBoxesInput, QTableWidget *&tableWidgetOutput, int numSkleyka, bool ignoreCellWidgetInLastColumn)
 {
 //    for (int i=0; i<16; i++) // функция для отладки
 //    {
@@ -253,7 +257,7 @@ void MainWindow::createSkleyka(QTableWidget *tableWidgetInput, QCheckBox **check
     bool ones[16]; // создаем массив, который будет хранить информацию, нажата-ли галочка
     int countChecked = 0; // переменная для подсчёта количества "галочек"
     QStringList listOnes; // список, хранящий все лементы в таблице, где функция принимает 1
-    getTWTextList(tableWidgetInput, listOnes); // получаем элементы из таблицы с 1
+    getTWTextList(tableWidgetInput, listOnes, ignoreCellWidgetInLastColumn); // получаем элементы из таблицы с 1
     int listOnesSize = listOnes.size(); // поулчаем количество элементов в списке с 1
     QStringList elements; // список для хранения элементов, где стоит галочка
     int last_num = 0; // переменная для хранения индекса строки, которая была последней, нужно для проверки строки, если выбрана только одна, не проходилали она уже склейку
@@ -274,6 +278,7 @@ void MainWindow::createSkleyka(QTableWidget *tableWidgetInput, QCheckBox **check
 //    }
     if(countChecked != 2) // если выбрано больше чем 2 галочки (больше или меньше), то пишем ошибку
     {
+        qDebug() << "Нажато " << countChecked << "галочек";
         criticalError("Выберите 2 элемента для произведения склейки!");
         return;
     }
@@ -329,7 +334,7 @@ void MainWindow::createSkleyka(QTableWidget *tableWidgetInput, QCheckBox **check
 //    }
     QString skleyka = skleykaList[0]; // получаем склейку
     QStringList skleykiInTable; // лист для получения склеек из таблицы
-    getTWTextList(tableWidgetOutput, skleykiInTable); // получаем склейки из таблицы
+    getTWTextList(tableWidgetOutput, skleykiInTable, ignoreCellWidgetInLastColumn); // получаем склейки из таблицы
     int intTableSize = skleykiInTable.size();
     bool adding = true; // флаг, разрешающий добавление склейки в таблицу (false если склейка уже имеется)
     if(intTableSize > 0) // если в таблице есть элементы
@@ -427,10 +432,10 @@ bool MainWindow::isContainsSkleyki(QStringList skleykiList, int numSkleyka)
 //    return ok;
 }
 
-void MainWindow::moveSkleyka(QTableWidget *tableWidgetInput, QCheckBox **checkBoxesInput, QTableWidget *&tableWidgetOutput, int numSkleyka)
+void MainWindow::moveSkleyka(QTableWidget *tableWidgetInput, QCheckBox **checkBoxesInput, QTableWidget *&tableWidgetOutput, int numSkleyka, bool ignoreCellWidgetInLastColumn)
 {
     QStringList listOnes; // список, хранящий все лементы в таблице, где есть галочка
-    getTWTextList(tableWidgetInput, listOnes); // получаем элементы, где есть галочка
+    getTWTextList(tableWidgetInput, listOnes, ignoreCellWidgetInLastColumn); // получаем элементы, где есть галочка
     int listOnesSize = listOnes.size(); // поулчаем количество элементов в списке с 1
     if(listOnesSize < 1) // если не выбрано ни одного элемента
     {
@@ -461,7 +466,7 @@ void MainWindow::moveSkleyka(QTableWidget *tableWidgetInput, QCheckBox **checkBo
         }
     }
     QStringList outputTableWidgetDataList;
-    getTWTextList(tableWidgetOutput, outputTableWidgetDataList); // считываем данные из таблицы, нужно для проверки, нет ли уже этой склейки в таблице
+    getTWTextList(tableWidgetOutput, outputTableWidgetDataList, ignoreCellWidgetInLastColumn); // считываем данные из таблицы, нужно для проверки, нет ли уже этой склейки в таблице
     bool contained = false; // флаг проверки наличия данной склейки в рассчитанном списке
     for (int i=0; i<elements.size(); i++)  // сравниваем каждый элемент первого списка
     {
@@ -510,11 +515,12 @@ void MainWindow::moveSkleyka(QTableWidget *tableWidgetInput, QCheckBox **checkBo
     setVariablesToHeader(tableWidgetOutput); // задаем заголовки
 }
 
-bool MainWindow::proverkaTable(QTableWidget *tableWidgetInput, QStringList listOfSkeyki, bool ignoreRedColor)
+bool MainWindow::proverkaTable(QTableWidget *tableWidgetInput, QStringList listOfSkeyki, bool ignoreRedColor, bool ignoreCellWidgetInLastColumn)
 {
     QStringList userFuncList; // создаем список для хранения данных из tableWidget с функцией
     bool ok= false; // переменная для получения коорректности получения списка из TableWidget для записи функции (таблицы истинности)
-    ok = getTWTextList(tableWidgetInput, userFuncList); // получаем список из таблицы истинности
+    qDebug() << "ignoreCellWidgetInLastColumn = " << ignoreCellWidgetInLastColumn;
+    ok = getTWTextList(tableWidgetInput, userFuncList, ignoreCellWidgetInLastColumn); // получаем список из таблицы истинности
     if(!ok)
     {
         qDebug() << "Не удалось получить список значений из таблицы истинности";
@@ -593,7 +599,7 @@ bool MainWindow::proverkaTable(QTableWidget *tableWidgetInput, QStringList listO
     return true;
 }
 
-void MainWindow::goToNextStep(QTableWidget *tableWidgetInput, QTableWidget *&tableWidgetOutput, int nextTabIndex)
+void MainWindow::goToNextStep(QTableWidget *tableWidgetInput, QTableWidget *&tableWidgetOutput, int nextTabIndex, bool ignoreCellWidgetInLastColumn)
 {
     qDebug() << "кнопка далее";
     if(tableWidgetInput == nullptr)
@@ -606,16 +612,16 @@ void MainWindow::goToNextStep(QTableWidget *tableWidgetInput, QTableWidget *&tab
         qDebug() << "tableWidgetOnesOnly == nullptr";
         return;
     }
-    copyTableWidget(tableWidgetInput, tableWidgetOutput, true); // переносим данные из одной таблицы в другую для продолжения
+    copyTableWidget(tableWidgetInput, tableWidgetOutput, true, ignoreCellWidgetInLastColumn); // переносим данные из одной таблицы в другую для продолжения
     tabWidget->setCurrentIndex(nextTabIndex); // переключаемся на следующий экран
     setVariablesToHeader(tableWidgetOutput); // устанавливаем заголовки как переменные
     center_text_in_table(tableWidgetOutput); // выраниваем текст в таблице
 }
 
-void MainWindow::copyTableWidget(QTableWidget *tableWidgetInput, QTableWidget *&tableWidgetOutput, bool skipIdenticalLines)
+void MainWindow::copyTableWidget(QTableWidget *tableWidgetInput, QTableWidget *&tableWidgetOutput, bool skipIdenticalLines, bool ignoreCellWidgetInLastColumn)
 {
     QStringList inputList; // список для получения значений из первой таблицы
-    bool flag = getTWTextList(tableWidgetInput, inputList); // получаем список строк
+    bool flag = getTWTextList(tableWidgetInput, inputList, ignoreCellWidgetInLastColumn); // получаем список строк
     if(!flag)
     {
         qDebug() << "copyTableWidget - ошибка!";
@@ -644,72 +650,15 @@ void MainWindow::copyTableWidget(QTableWidget *tableWidgetInput, QTableWidget *&
     }
     addQStringListToTWOneSymwolInItem(tableWidgetOutput, inputList); // выводим элементы в таблицу
     center_text_in_table(tableWidgetOutput); // выравниваем ячейки
-
-//    qDebug() << "начало функции copyTableWidget";
-//    int rows = tableWidgetInput->rowCount(); // получаем количество строк в исходном виджете
-//    int cols = tableWidgetInput->columnCount(); // получаем количество столбцов в исходном виджете
-//    qDebug() << "получили количество строк и столбцов";
-//    tableWidgetOutput->setRowCount(rows); // устанавливаем количество строк такое же, как в исходном виджете
-//    tableWidgetOutput->setColumnCount(cols); // устанавливаем количество
-//    qDebug() << "Установили корличество столбцов и строк";
-//    if(rows > 0 && cols > 0) // если есть хоть один столбиц или одна строка
+//    if(addCheckboxes && checkBoxesInput)
 //    {
-////        QStringList horisontalHeaders;
-////        QStringList verticalHeaders;
-//        QStringList tableWidgetInputList; // создаем список для получения значений из таблицы импорта
-//        getTWTextList(tableWidgetInput, tableWidgetInputList); // получаем значения из таблицы
-//        int fillRowsCount = 0; // переменная для хранения, какая строка должна заполняться следующей в таблице экспорта
-//        for (int i=0; i< rows; i++) // проходим по каждой строке
+//        int cols = tableWidgetOutput->columnCount();
+//        tableWidgetOutput->setColumnCount(cols+1); // добавляем столбец
+//        for (int i=0; i<tableWidgetOutput->rowCount(); i++)
 //        {
-//            QStringList tableWidgetOutputList; // создаем список для получения значений из таблицы экспорта
-//            getTWTextList(tableWidgetOutput, tableWidgetOutputList); // получаем значения из таблицы
-//            if(skipIdenticalLines) // если нужно пропускать одинаковые строки
-//            {
-//                bool contain = false;
-//                for (int h=0; h<tableWidgetOutputList.size(); h++) // проходим по каждому элементу, который уже есть в таблице вывода
-//                {
-//                    if(tableWidgetInputList.at(i) == tableWidgetOutputList.at(h)) // если елемент совпадает с тем, что уже есть
-//                    {
-//                        contain = true;
-//                        break;
-//                    }
-//                }
-//                if(contain) // если элемент содержится
-//                {
-//                    continue; // пропускам итерацию цикла
-//                    tableWidgetOutput->setRowCount(tableWidgetOutput->rowCount()-1); // устанавливаем количество строк на 1 меньше, т.к. одно значение уже пропущено
-//                }
-//            }
-//            qDebug() << "строка" << i;
-////            verticalHeaders.append(tableWidgetInput->verticalHeaderItem(i)->text()); // добавляем название вертикального элемента в список
-//            for (int j=0; j<cols; j++) // проходим по каждому столбцу
-//            {
-//                qDebug() << "столбец" << j;
-////                horisontalHeaders.append(tableWidgetInput->horizontalHeaderItem(j)->text());// добавляем название горизонтального элемента в список
-//                QTableWidgetItem *item = tableWidgetInput->item(i, j); // берем ящейку
-//                if(item != nullptr) // если она не пустая
-//                {
-//                    qDebug() << "Элемент не пустой";
-//                    QString text = tableWidgetInput->item(i, j)->text();
-//                    tableWidgetOutput->setItem(fillRowsCount, j, new QTableWidgetItem(text)); // копируем её
-//                }
-//                else
-//                {
-//                    qDebug() << "элемент пустой";
-//                    tableWidgetOutput->setItem(fillRowsCount, j, new QTableWidgetItem("")); // иначе создаем новую
-//                }
-//            }
-//            fillRowsCount++; // увеличиваем номер строки
+//            setCellCheckBox(tableWidgetOutput, &checkBoxesInput[i], i, cols); // передаём на установку в последний столбец checkBox
 //        }
-//        qDebug() << "прошли по всем строчкам";
-////        tableWidgetOutput->setHorizontalHeaderLabels(horisontalHeaders); // устанавиваем горизонтальные заголовки
-////        tableWidgetOutput->setVerticalHeaderLabels(verticalHeaders); // устанавливаем вертикальные заголовки
 //    }
-//    else {
-//        qDebug() << "недостаточн острок или столбцов" << rows << cols;
-//    }
-//    qDebug() << "Функция copyTableWidget завершена";
-//    center_text_in_table(tableWidgetOutput); // выравниваем ячейки
 }
 
 void MainWindow::deletelastRow(QTableWidget *&tableWidget)
@@ -729,7 +678,7 @@ void MainWindow::deletelastRow(QTableWidget *&tableWidget)
     center_text_in_table(tableWidget); // выравниваем ячейки
 }
 
-void MainWindow::sortSkleiki(QTableWidget *skleikiTableWidget)
+void MainWindow::sortSkleiki(QTableWidget *skleikiTableWidget, bool ignoreCellWidgetInLastColumn)
 {
     int rows = skleikiTableWidget->rowCount(); // получаем количество строк
     int cols = skleikiTableWidget->columnCount(); // получаем количество стобцов
@@ -739,7 +688,7 @@ void MainWindow::sortSkleiki(QTableWidget *skleikiTableWidget)
         return;
     }
     QStringList skleikiList; // создаём лист для хранения склеек
-    if(!getTWTextList(skleikiTableWidget, skleikiList))
+    if(!getTWTextList(skleikiTableWidget, skleikiList, ignoreCellWidgetInLastColumn))
     {
         qDebug() << "Не удалось получить данные из таблицы";
         return;
@@ -856,7 +805,7 @@ void MainWindow::sortSkleiki(QTableWidget *skleikiTableWidget)
     skleikaSort = nullptr;
 }
 
-void MainWindow::sortOnesCount(QTableWidget *tableWidgetInput)
+void MainWindow::sortOnesCount(QTableWidget *tableWidgetInput, bool ignoreCellWidgetInLastColumn)
 {
     int rows = tableWidgetInput->rowCount(); // получаем количество строк
     int cols = tableWidgetInput->columnCount(); // получаем количество стобцов
@@ -866,7 +815,7 @@ void MainWindow::sortOnesCount(QTableWidget *tableWidgetInput)
         return;
     }
     QStringList skleikiList; // создаём лист для хранения склеек
-    if(!getTWTextList(tableWidgetInput, skleikiList))
+    if(!getTWTextList(tableWidgetInput, skleikiList, ignoreCellWidgetInLastColumn))
     {
         qDebug() << "Не удалось получить данные из таблицы.";
         return;
@@ -906,10 +855,10 @@ void MainWindow::sortOnesCount(QTableWidget *tableWidgetInput)
 }
 
 
-QString MainWindow::getQStringByTableWidget(QTableWidget *tableWidget, bool saveLineColor)
+QString MainWindow::getQStringByTableWidget(QTableWidget *tableWidget, bool saveLineColor, bool ignoreCellWidgetInLastColumn)
 {
     QStringList list; // создаём список, в который запишем строки из таблицы
-    getTWTextList(tableWidget, list); // получаем список из строк из таблицы
+    getTWTextList(tableWidget, list, ignoreCellWidgetInLastColumn); // получаем список из строк из таблицы
     if(list.size() == 0) // если в списке ничего нет
     {
         return ""; // вызврпащаем пустоту
