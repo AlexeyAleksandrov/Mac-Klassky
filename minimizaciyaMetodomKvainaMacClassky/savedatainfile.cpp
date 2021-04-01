@@ -19,14 +19,14 @@ void MainWindow::saveDataToFile()
         QString str_step = "step=" + QString::number(step); // сохраняем номер текущего шага
         qDebug() << "Последний сохраненный этап: " << step;
         QString str_func2 = "lineEditFunc_2=" + lineEditFunc_2->text(); // сохраняем то, что введено в строку функции, записанной в 2 ССЧ
-        QString str_tot = "tableWidgetTot=" + getQStringByTableWidget(tableWidgetTot); // получаем строку из таблицы истинности
-        QString str_ones_only_editing = "tableWidgetOnesOnlyEditing=" + getQStringByTableWidget(tableWidgetOnesOnlyEditing, LINE_COLOR_ON);
-        QString str_tableWidget_one_only = "tableWidget_one_only=" + getQStringByTableWidget(tableWidgetOnesOnly, LINE_COLOR_ON);
+        QString str_tot = "tableWidgetTot=" + getQStringByTableWidget(tableWidgetTot, false, false); // получаем строку из таблицы истинности
+        QString str_ones_only_editing = "tableWidgetOnesOnlyEditing=" + getQStringByTableWidget(tableWidgetOnesOnlyEditing, LINE_COLOR_ON, false);
+        QString str_tableWidget_one_only = "tableWidget_one_only=" + getQStringByTableWidget(tableWidgetOnesOnly, LINE_COLOR_ON, false);
         QString str_tableWidgetsSkleykiEditing_0 = "str_tableWidgetsSkleykiEditing_0=" + getQStringByTableWidget(tableWidgetsSkleykiEditing[0], LINE_COLOR_ON);
         QString str_tableWidgetsSkleykiEditing_1 = "str_tableWidgetsSkleykiEditing_1=" + getQStringByTableWidget(tableWidgetsSkleykiEditing[1], LINE_COLOR_ON);
         QString str_tableWidgetsSkleykiEditing_2 = "str_tableWidgetsSkleykiEditing_2=" + getQStringByTableWidget(tableWidgetsSkleykiEditing[2], LINE_COLOR_ON);
-        QString str_tableWidgetsSkleyki_0 = "str_tableWidgetsSkleyki_0=" + getQStringByTableWidget(tableWidgetsSkleyki[0], LINE_COLOR_ON);
-        QString str_tableWidgetsSkleyki_1 = "str_tableWidgetsSkleyki_1=" + getQStringByTableWidget(tableWidgetsSkleyki[1], LINE_COLOR_ON);
+        QString str_tableWidgetsSkleyki_0 = "str_tableWidgetsSkleyki_0=" + getQStringByTableWidget(tableWidgetsSkleyki[0], LINE_COLOR_ON, false);
+        QString str_tableWidgetsSkleyki_1 = "str_tableWidgetsSkleyki_1=" + getQStringByTableWidget(tableWidgetsSkleyki[1], LINE_COLOR_ON, false);
 //        QString str_tableWidgetKartaMinimizacii = "tableWidgetKartaMinimizacii=" + getQStringByTableWidget(tableWidgetKartaMinimizacii);
         QString str_tableWidgetKartaMinimizacii = "tableWidgetKartaMinimizacii=";
         int rows = tableWidgetKartaMinimizacii->rowCount(); // получаем количество строк в карте минимизации
@@ -184,7 +184,8 @@ void MainWindow::readDataFromFile()
             {
                 QString str_func2 = dataList[1]; // считываем данные из 2й части строки
                 lineEditFunc_2->setText(str_func2); // выводим текст в lineEdit, где он должен быть
-                pushButtonFunc2Clicked();  // эмитируем нажатие кнопки
+                on_lineEdit_func_2_textChanged(lineEditFunc_2->text());
+//                pushButtonFunc2Clicked();  // эмитируем нажатие кнопки
             }
 
         }

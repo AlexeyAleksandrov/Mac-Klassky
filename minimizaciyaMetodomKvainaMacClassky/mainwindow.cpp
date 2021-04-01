@@ -1755,3 +1755,8 @@ void MainWindow::on_pushButton_checkTableOfTrue_clicked()
     function_2 = ui->lineEdit_func_2->text().remove(" ");
     qDebug() << "func-2 = " << function_2;
 }
+
+void MainWindow::on_temp_pushButton_clicked()
+{
+    message(QString::number(this->width()));
+}

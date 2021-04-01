@@ -283,6 +283,8 @@ private slots:
 
     void on_pushButton_checkTableOfTrue_clicked();
 
+    void on_temp_pushButton_clicked();
+
 private: // функции проверки
     bool proverkaTableOfTrue(); // функция проверки таблицы истинности
     bool proverkaOnesOnly(); // фунция проверки таблицы, где F(abcd) = 1
